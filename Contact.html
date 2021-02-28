@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<!--
+	Ion by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>樂居醫療器材有限公司</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-xlarge.css" />
+		</noscript>
+		
+		<!-- 點選自動下滑 -->
+		<script type="text/javascript">
+			$(function(){
+				$('#LM').click(function(){
+				$('html,body').animate({scrollTop:$('#one').offset().top}, 600);
+					}); //代表一個完整的執行區塊
+			})
+
+			//宣告預設表單內容為空 （你想要的話也可以加東西）
+			var initSubject='',initBody='';
+ 
+			//按下傳送按鈕後執行
+			function submitHandler(){
+			var to = "leo671230@gmail.com";//寫死的傳送對象 就是公司的信箱 不會顯示在網頁上
+			var name = nameText.value;//讀取ID為 nameTextuser 物件中的值
+			var email = emailText.value;
+			var tel = telText.value;
+			var subject = subText.value;
+			//把user填的資料都塞到 mail body 中
+			var body = ""+bodyText.value+'%0A%0A%0A';//%0A是換行 換了三行
+				body += "From："+nameText.value+'%0A';
+				body += "Email："+emailText.value+'%0A';
+				body += "Tel："+telText.value;
+			//傳送的主要程式碼  
+				mailTo.href="mailto:"+to+"?subject="+subject+"&body="+body;
+				mailTo.click();
+			}
+
+			//在body onload
+			function init(){
+				subText.value=initSubject;
+				toText.value=initTo;
+				bodyText.value=initBody;
+			}
+		</script>
+	</head>
+	<body id="top">
+
+		<!-- Header -->
+			<header id="header" class="skel-layers-fixed">
+				<h1><a href="index.html">樂居醫療器材有限公司</a></h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html">首頁</a></li>
+						<li><a href="About.html">關於樂居</a></li>
+						<li><a href="Service.html">樂居服務</a></li>
+						<li><a href="Showroom.html">商店</a></li>
+						<li><a href="ADG.html">輔具教學</a></li>
+						<li><a href="Contact.html">聯絡我們</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- One -->
+			<section id="one" class="wrapper style1">
+				<header class="major">
+					<h2>聯絡我們</h2>
+					<p>若您有任何疑問或建議，歡迎留下您寶貴的建議</p>
+				</header>
+				<div class="container">
+					<div style="margin-left: auto; margin-right: auto;">
+						<section class="special box">
+							<form class="CONTACT_box" enctype="text/plain" accept-charset="utf-8">
+								<!-- 寄件者姓名    -->
+								<!-- required 必填欄位 ，placeholder 預設內容-->
+								<div class="div_title form">姓名</div>
+								<input class="form Form_Name" id="nameText" type="text" name="Name"  value size="48" placeholder="姓名(name)" required/>   
+								<!-- 寄件者email -->
+								<div class="div_title form">Email</div>
+								<input class="form Form_mail" id="emailText" type="email" name="Email"  value size="48" placeholder="Email" required/>
+								<!-- 寄件者電話 -->
+								<div class="div_title form">行動電話</div>
+								<input class="form Form_Tel" id="telText" type="text" name="Phone"  value size="48" aria-invalid="false" placeholder="電話(phone)" required/>
+								<!-- 郵件主旨 -->
+								<div class="div_title form">主旨</div>
+								<input  class="form Form_Main" id="subText" type="text" name="Subject"  value size="48" aria-invalid="false" placeholder="主旨(subject)" required/>
+								<!-- 郵件內容 -->
+								<div class="div_title form">想跟我們說。。。</div>
+								<textarea class="form Form_Cont" id="bodyText" name="your-message" cols="40" rows="10"  aria-required="true" aria-invalid="false" placeholder="你的訊息(Your Message)" required></textarea>
+								<!-- 傳送按鈕 -->
+								<div>
+								<input type="submit" value="送出訊息" onclick="submitHandler();" style="margin-top: 20px;">
+								<a id="mailTo"></a>
+								</div>
+							</form>
+						</section>
+					</div>
+				</div>
+			</section>
+			
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<div class="row double">
+						<div class="6u">
+							<div class="row collapse-at-2">
+								<div class="6u">
+									<h3>聯絡我們</h3>
+									<ul class="alt">
+										<li>代碼:9999</li>
+										<li>桃園市中立區永清街173號</li>
+										<li>0958-420058</li>
+										<li>公司信箱寫這邊</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="6u">
+							<h2>樂居醫療器材有限公司</h2>
+							<p>Blandit nunc tempor lobortis nunc non. Mi accumsan. Justo aliquet massa adipiscing cubilia eu accumsan id. Arcu accumsan faucibus vis ultricies adipiscing ornare ut. Mi accumsan justo aliquet.</p>
+							<ul class="icons">
+								<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+							</ul>
+						</div>
+					</div>
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li>
+						<li>Produce: Leon Chen</li>
+						<li>Images: <a href="http://unsplash.com">Unsplash</a></li>
+					</ul>
+				</div>
+			</footer>
+
+	</body>
+</html>
